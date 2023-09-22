@@ -32,9 +32,6 @@ section {
   margin: 10px;
   cursor: pointer;
 }
-#webcam {
-  transform: scaleX(-1);
-}
 
 .camView p {
   position: absolute;
