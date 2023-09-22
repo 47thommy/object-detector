@@ -49,3 +49,60 @@ section {
   z-index: 1;
   position: absolute;
 }
+
+/* Base styles for all screen sizes */
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  color: #3d3d3d;
+}
+
+h1 {
+  font-style: italic;
+  color: #ff6f00;
+}
+
+video {
+  max-width: 100%; /* Ensure videos don't overflow their containers */
+  height: auto; /* Maintain aspect ratio */
+}
+
+section {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.removed {
+  display: none;
+}
+
+/* Styles for screens with a maximum width of 768px (e.g., tablets) */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 24px; /* Decrease font size for smaller screens */
+  }
+
+  .camView {
+    width: 100%; /* Full width for smaller screens */
+    margin: 0; /* Remove margins for smaller screens */
+  }
+
+  .camView p {
+    font-size: 12px; /* Decrease font size for smaller screens */
+  }
+}
+
+/* Styles for screens with a maximum width of 480px (e.g., mobile phones) */
+@media screen and (max-width: 480px) {
+  body {
+    margin: 1em; /* Smaller margin for smaller screens */
+  }
+
+  h1 {
+    font-size: 20px; /* Further decrease font size for smaller screens */
+  }
+
+  .camView {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
