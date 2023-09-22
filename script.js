@@ -29,7 +29,7 @@ function enableCam(event) {
 
   // getUsermedia parameters to force video but not audio.
   const constraints = {
-    video: { facingMode: "environment" }, // Add facingMode property to use the rear-facing camera
+    video: true,
   };
 
   // Activate the webcam stream.
@@ -37,11 +37,6 @@ function enableCam(event) {
     video.srcObject = stream;
     video.addEventListener("loadeddata", predictWebcam);
   });
-}
-
-// Placeholder function for the next step.
-function predictWebcam() {
-  // Implement your webcam prediction logic here.
 }
 
 // Store the resulting model in the global scope of our app.
